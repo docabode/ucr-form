@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Abode - UCR Operational Process Questionnaire</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f7;
+            color: #333;
+        }
+
+        /* Branding and Header */
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 120px;
+        }
+
+        header h1 {
+            margin: 10px 0 5px 0;
+            font-size: 28px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Form Container */
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        .response {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #bdc3c7;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Branding & Header -->
+    <header>
+        <img src="https://docabode.com/wp-content/uploads/2020/04/logo.png" alt="Doc Abode Logo">
+        <h1>Doc Abode</h1>
+        <p>UCR Operational Process Questionnaire</p>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <form id="ucrForm">
+
+            <!-- Section 1: Resource Allocation -->
+            <h3>1. Resource Allocation</h3>
+
+            <label for="system">What system or process do you currently use to schedule frontline staff (field-based healthcare providers) for UCR?</label>
+            <select id="system" name="system">
+                <option value="SystmOne">SystmOne</option>
+                <option value="Rio">Rio</option>
+                <option value="Careflow">Careflow</option>
+                <option value="EMIS">EMIS</option>
+                <option value="Excel">Microsoft Excel</option>
+                <option value="Paper-based">Paper-based</option>
+                <option value="Whiteboard">Whiteboard</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Teams">Microsoft Teams</option>
+                <option value="SMS">SMS (Text Message)</option>
+                <option value="Phone calls">Phone Calls</option>
+                <option value="Google Maps">Google Maps</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="allocation">How is the decision made about which staff member to allocate to a patient visit?</label>
+            <select id="allocation" name="allocation">
+                <option value="Proximity">Based on proximity to the patient</option>
+                <option value="Skills">Staff skills and qualifications</option>
+                <option value="Availability">Staff availability</option>
+                <option value="Workload">Workload distribution</option>
+                <option value="First-come">First-come-first-serve</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="automation">Is the allocation process automated or manual?</label>
+            <select id="automation" name="automation">
+                <option value="Fully automated">Fully automated</option>
+                <option value="Partially automated">Partially automated</option>
+                <option value="Fully manual">Fully manual</option>
+            </select>
+
+            <label for="delays">Do you experience delays in allocating resources due to manual processes or system limitations?</label>
+            <select id="delays" name="delays">
+                <option value="Yes frequently">Yes, frequently</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="No">No, allocation is smooth</option>
+            </select>
+
+            <!-- Section 2: Availability Tracking -->
+            <h3>2. Availability Tracking</h3>
+
+            <label for="tracking">How do you track which staff are available for UCR at any given time?</label>
+            <select id="tracking" name="tracking">
+                <option value="Digital system">Digital system (SystmOne, Rio, etc.)</option>
+                <option value="Excel">Microsoft Excel</option>
+                <option value="Paper-based">Paper-based</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Teams">Microsoft Teams</option>
+                <option value="Phone calls">Phone calls</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="availability-updates">How is the availability of staff updated throughout the day (e.g., after completing visits)?</label>
+            <select id="availability-updates" name="availability-updates">
+                <option value="Manual updates">Manually by staff</option>
+                <option value="System updates">System automatically updates</option>
+                <option value="Coordinator updates">Coordinator updates based on phone calls</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="remote-updates">Do staff need to return to a central location to update their availability, or is it done remotely?</label>
+            <select id="remote-updates" name="remote-updates">
+                <option value="Central location">Return to a central location</option>
+                <option value="Remotely">Remotely via phone/app</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- Section 3: Reporting Outcomes -->
+            <h3>3. Reporting Outcomes</h3>
+
+            <label for="outcome-reporting">How do you record and track visit outcomes (e.g., completed visits, rescheduled visits)?</label>
+            <select id="outcome-reporting" name="outcome-reporting">
+                <option value="Digital system">Digital system (SystmOne, Rio, Careflow, etc.)</option>
+                <option value="Paper-based">Paper-based</option>
+                <option value="Excel">Microsoft Excel</option>
+                <option value="WhatsApp">WhatsApp messages</option>
+                <option value="Teams">Microsoft Teams messages</option>
+                <option value="Phone calls">Phone call updates</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="real-time-updates">Do you have visibility of delays or missed visits in real time?</label>
+            <select id="real-time-updates" name="real-time-updates">
+                <option value="Yes">Yes, through system alerts</option>
+                <option value="No">No, we only find out afterwards</option>
+            </select>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <div id="result" class="response"></div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 Doc Abode. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("ucrForm").onsubmit = function(event) {
+            event.preventDefault();
+            var formData = new FormData(event.target);
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "<h3>Submitted Responses:</h3>";
+
+            for (var [key, value] of formData.entries()) {
+                resultDiv.innerHTML += "<strong>" + key + ":</strong> " + value + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
